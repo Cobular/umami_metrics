@@ -7,18 +7,19 @@ async fn send_event() {
         "https://umami.cobular.com".to_string(),
     );
 
-    let res = umami.event(
-        "/".to_string(),
-        "click".to_string(),
-        "eee".to_string(),
-        "tets".to_string(),
-        "asdfasdfasfd".to_string(),
-        "asdfasdf".to_string(),
-    ).await;
+    let res = umami
+        .event(
+            "/".to_string(),
+            "click".to_string(),
+            "eee".to_string(),
+            "tets".to_string(),
+            "asdfasdfasfd".to_string(),
+            "asdfasdf".to_string(),
+        )
+        .await;
 
     assert!(res.is_ok());
 }
-
 
 #[tokio::test]
 async fn send_pageview() {
@@ -27,13 +28,15 @@ async fn send_pageview() {
         "https://umami.cobular.com".to_string(),
     );
 
-    let res = umami.pageview(
-        "/".to_string(),
-        "click".to_string(),
-        "eee".to_string(),
-        "tets".to_string(),
-        "asdfasdfasfd".to_string(),
-    ).await;
+    let res = umami
+        .pageview(
+            "/".to_string(),
+            "click".to_string(),
+            "eee".to_string(),
+            "tets".to_string(),
+            "asdfasdfasfd".to_string(),
+        )
+        .await;
 
     assert!(res.is_ok());
 }

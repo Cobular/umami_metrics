@@ -2,14 +2,14 @@
 
 //!
 //! A Rust library for sending metrics to [Umami](https://umami.io), a self hosted and privacy preserving metrics stack.
-//! 
+//!
 //! Supports both pageview and event metrics.
-//! 
+//!
 //! ## Basic Example:
-//! 
+//!
 //! ```ignore
 //! use umami_metrics::Umami;
-//! 
+//!
 //! let umami = Umami::new(
 //!     "website_id".to_string(),
 //!     "https://umami_instance.com".to_string(),
@@ -38,14 +38,14 @@ pub mod types;
 use anyhow::Result;
 use reqwest::StatusCode;
 
-use crate::types::{Event, Pageview, EventPayload, PageviewPayload};
+use crate::types::{Event, EventPayload, Pageview, PageviewPayload};
 
 /// A struct representing an instance of a page tracked by Umami.
-/// 
-/// For the methods below, any will be accepted in my testing, 
-/// so feel free to use them for whatever you want. However, 
+///
+/// For the methods below, any will be accepted in my testing,
+/// so feel free to use them for whatever you want. However,
 /// using garbage in say the screen size field may result in
-/// less useful tracking data, so consider what fields you use 
+/// less useful tracking data, so consider what fields you use
 /// to pack your assorted information.
 pub struct Umami {
     website_id: String,
