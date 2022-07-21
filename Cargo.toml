@@ -2,6 +2,8 @@
 name = "umami_metrics"
 version = "0.1.0"
 edition = "2021"
+description = "A rust library to send metrics data to the Umami metrics platform"
+license-file = "LICENSE.md"
 
 [badges.maintenance]
 status = "actively-developed"
