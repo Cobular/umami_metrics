@@ -1,3 +1,5 @@
+#![doc(html_root_url = "https://docs.rs/umami_metrics/0.1.0")]
+
 pub mod types;
 
 #[cfg(test)]
